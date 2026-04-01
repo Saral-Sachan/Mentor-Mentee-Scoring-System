@@ -12,4 +12,6 @@ README.md               # This documentation file
 SetUp Instructions->
 1) Install python lastest version
 2) Install Numpy and Pandas Libraries
-3) To run the program type python main.py in the dedicated terminal, ensuring the structure of the project
+
+Run the program-->
+To run the program type "python main.py" in the dedicated terminal, ensuring the structure of the project is same as above mentioned

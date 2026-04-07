@@ -61,8 +61,6 @@ def aggregate_mentor_stats(mentors_df, student_mentor_df, interactions_df):
     return master_stats
 
 
-import numpy as np
-
 def calculate_core_metrics(master_stats, feedback_df=None):
     # 1. Progress Score (P)
     # Already calculated as 'Raw_Progress' in the aggregation step.

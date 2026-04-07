@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import ast
+
 
 def load_data():
     # Load the raw data

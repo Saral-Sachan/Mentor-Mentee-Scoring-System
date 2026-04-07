@@ -108,7 +108,7 @@ def calculate_core_metrics(master_stats, feedback_df=None):
             (m / (master_stats['Num_Ratings'] + m)) * global_mean
         ) / 5.0
     else:
-        # Fallback if no data is provided: assign a neutral 0.5 or 1.0 depending on your design choice
+        # Fallback if no data is provided: assign a neutral 0.5
         master_stats['F_Score'] = 0.5 
 
     return master_stats
@@ -188,7 +188,7 @@ def generate_final_rankings(master_stats):
     return output_df
 
 if __name__ == "__main__":
-    print("🚀 Starting WnCC Mentor Evaluation System...")
+    print("Starting WnCC Mentor Evaluation System...")
 
     try:
         # 1. Load the raw CSV data
@@ -213,11 +213,11 @@ if __name__ == "__main__":
         final_rankings_df = generate_final_rankings(master_stats)
 
         # Print a quick preview to the console to verify it worked
-        print("\n✅ Success! Here are the Top 5 Mentors:")
+        print("\n Success! Here are the Top 5 Mentors:")
         print(final_rankings_df.head().to_string(index=False))
 
     except FileNotFoundError as e:
-        print(f"\n❌ Error: Could not find the required CSV files. {e}")
+        print(f"\n Error: Could not find the required CSV files. {e}")
         print("Make sure mentors.csv, students.csv, and interactions.csv are in the same folder as this script.")
     except Exception as e:
-        print(f"\n❌ An unexpected error occurred: {e}")
+        print(f"\n An unexpected error occurred: {e}")
